@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MyBackgroundcolor"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="10dp"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/firstquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Nato"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Nato_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/NATO_2000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/on2000"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/NATO_2003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/on2003"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/NATO_2004"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/on2004"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/NATO_2005"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/on2005"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/secondquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Karalius"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Karalius_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/Karalius_Mindaugas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/Mindaugas"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Karalius_Vytautas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Vytautas"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Karalius_Jogaila"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Jogailas"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Karalius_Kęstutis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Kęstutis"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/thirdquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Beornot"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Hamletas_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/Otelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/Otelas"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Kafka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Kafka"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Hamletas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Hamletas"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/Faustas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/Faustas"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/fourthquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Lygumos"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Lygumos_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/o25"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o75"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o75"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o60"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o85"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o85"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/fifthquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Centras"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Centras_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o1989"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/o1989"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o2001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o2001"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o1977"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o1977"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o1995"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o1995"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/sixthquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Paper"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Paper_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/newyorktimes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/newYorkTimes"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/zmones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/zmones"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/vyrams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/vyrams"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/usdailynews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/USdailynews"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/seventhquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Olimp"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Olimp_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o1940"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/o1940"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o1920"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o1920"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o1932"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o1932"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o1924"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o1924"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/eigthquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Internet"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Internet_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/o15"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o35"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o45"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o45"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o55"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o55"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/ninethquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Taxes"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Taxes_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/x2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/x2"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/x3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/x3"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/x4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/x4"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/x5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/x5"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tenthquestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Duona"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/Duona_RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o70kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:checked="true"
+                    android:text="@string/o70kg"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o85kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o85kg"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o95kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o95kg"
+                    android:textColor="@color/White" />
+
+                <RadioButton
+                    android:id="@+id/o110kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/White"
+                    android:text="@string/o110kg"
+                    android:textColor="@color/White" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/firstquiz_endnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/MyRegistrationcolor"
+                android:text="@string/endquiz"
+                android:textColor="@color/White" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

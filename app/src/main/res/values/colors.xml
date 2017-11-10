@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="MyBackgroundcolor">#050000</color>
+    <color name="MyRegistrationcolor">#303F9F</color>
+    <color name="White">#ffffff</color>
+    <color name="Congrulations">#5fecd5</color>
+</resources>

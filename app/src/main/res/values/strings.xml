@@ -1,0 +1,98 @@
+<resources>
+    <string name="facebook_app_id">228175657718864</string>
+    <string name="fb_login_protocol_scheme">fb228175657718864</string>
+    <string name="app_name">QuizUp</string>
+
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="register_email">Email</string>
+    <string name="register_repeat_password">Repeat password</string>
+    <string name="login_submit">Login</string>
+    <string name="register">Sign up</string>
+    <string name="registration">Registration</string>
+    <string name="login_invalid_username">Bad username format</string>
+    <string name="login_invalid_password">Bad password format</string>
+    <string name="register_invalid_email">Bad Email format</string>
+    <string name="passwords_not_match">Password not match</string>
+    <string name="Login_please_wait">Please wait</string>
+    <string name="register_success">Registration succeeded</string>
+    <string name="register_failure">Username or Email is taken by another account</string>
+    <string name="URL_DATABASE">http://www.kerutisvilius.byethost14.com/mobile/quizdatabase.php</string>
+    <string name="URL_GETDATABASE">http://www.kerutisvilius.byethost14.com/mobile/getdatabase.php</string>
+    <string name="login_success">Login succeeded</string>
+    <string name="login_failure">Username or Email is not found</string>
+    <string name="test_quiz">Quiz about Lithuania</string>
+
+    <string name="Nato">1. Kada Lietuva įstojo į NATO ?</string>
+    <string name="on2004">2004 m.</string>
+    <string name="on2000">2000 m.</string>
+    <string name="on2003">2003 m.</string>
+    <string name="on2005">2005 m.</string>
+    <string name="endquiz">End Quiz</string>
+
+    <string name="Karalius">2. Kas buvo vienintelis Lietuvos karalius ?</string>
+    <string name="Mindaugas">Mindaugas</string>
+    <string name="Vytautas">Vytautas</string>
+    <string name="Jogailas">Jogaila</string>
+    <string name="Kęstutis">Kęstutis</string>
+
+    <string name="Beornot">3. Kas pasakė „Būti ar nebūti“ ?"</string>
+    <string name="Otelas">Otelas</string>
+    <string name="Kafka">Kafka</string>
+    <string name="Hamletas">Hamletas</string>
+    <string name="Faustas">Faustas</string>
+
+    <string name="Lygumos">4. Kiek Lietuvos reljefo sudaro lygumos ?</string>
+    <string name="o25">25%</string>
+    <string name="o75">75%</string>
+    <string name="o60">60%</string>
+    <string name="o85">85%</string>
+
+    <string name="Centras">5. Kada Lietuvoje buvo nustatytas Europos geografinis centras ?</string>
+    <string name="o1989">1989 m.</string>
+    <string name="o2001">2001 m.</string>
+    <string name="o1977">1997 m.</string>
+    <string name="o1995">1995 m.</string>
+
+    <string name="Paper">6. Koks žurnalas Vilnių pripažino viena iš geriausių vietų gyventi ?</string>
+    <string name="newYorkTimes">„New York Times“</string>
+    <string name="zmones">„Žmonės“</string>
+    <string name="vyrams">„Vyrams“</string>
+    <string name="USdailynews">„US Daily News“</string>
+
+    <string name="Olimp">7. Kada Lietuva debiutavo olimpinėse žaidynėse Paryžiuje ?</string>
+    <string name="o1940">1940 m.</string>
+    <string name="o1920">1920 m.</string>
+    <string name="o1932">1932 m.</string>
+    <string name="o1924">1924 m.</string>
+
+    <string name="Internet">8. Kiek kartų per 10 metų išaugo vidutinis interneto greitis Lietuvoje ?</string>
+    <string name="o15">x15</string>
+    <string name="o35">x35</string>
+    <string name="o45">x45</string>
+    <string name="o55">x55</string>
+
+    <string name="Taxes">9. Kokia mokesčio lengvata taikoma už mokslinių tyrimų ir plėtros veiklą ?</string>
+    <string name="x2">x2</string>
+    <string name="x3">x3</string>
+    <string name="x4">x4</string>
+    <string name="x5">x5</string>
+
+    <string name="Duona">10. Kiek juodos duonos suvalgo vienas lietuvis per metus ?</string>
+    <string name="o70kg">70kg</string>
+    <string name="o85kg">85kg</string>
+    <string name="o95kg">95kg</string>
+    <string name="o110kg">110kg</string>
+
+    <string name="Correct">Teisingas atsakymas:</string>
+    <string name="Getback">Return</string>
+    <string name="CheckAnswers">Check the answers</string>
+
+    <string name="Search">Search</string>
+    <string name="Searchquizresults">Search for quiz results...</string>
+    <string name="Vartotojas">Vartotojas</string>
+    <string name="SmallText">Small Text</string>
+    <string name="price">price</string>
+
+</resources>

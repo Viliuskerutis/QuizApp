@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textvartotojas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Vartotojas"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Congrulations" />
+
+
+    <TextView
+        android:id="@+id/textkiekis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textvartotojas"
+        android:layout_marginLeft="5dp"
+        android:text="@string/SmallText"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textkiekis"
+        android:layout_marginLeft="5dp"
+        android:text="@string/price"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/White" />
+
+</RelativeLayout>

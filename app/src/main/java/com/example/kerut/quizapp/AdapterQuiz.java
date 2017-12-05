@@ -45,7 +45,7 @@ public class AdapterQuiz extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         MyHolder myHolder = (MyHolder) holder;
         Apklausa current = data.get(position);
         myHolder.textvartotojas.setText("Vartotojas: " + current.getVartotojas());
-        myHolder.textkiekis.setText("Atsakyta teisingai klausimų: " + current.getKiekis() + "0%");
+        myHolder.textkiekis.setText("Atsakyta teisingai klausimų: " + current.getKiekis());
         myHolder.textdata.setText("Data: " + current.getData());
     }
 

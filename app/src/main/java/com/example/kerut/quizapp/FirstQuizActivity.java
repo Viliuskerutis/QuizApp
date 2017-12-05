@@ -137,7 +137,7 @@ public class FirstQuizActivity extends AppCompatActivity {
                     kiekis++;
                 }
 
-                String kiek = "" + kiekis + "";
+                String kiek = "" + kiekis + "/10";
                 data.add(1, kiek);
                 addResultToDB(data);
                 setContentView(R.layout.test_ending);

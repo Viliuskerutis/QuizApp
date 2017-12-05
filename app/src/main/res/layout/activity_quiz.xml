@@ -23,4 +23,17 @@
         android:background="@color/MyRegistrationcolor"
         android:text="@string/test_quiz"
         android:textColor="@color/White" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/projectquiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/MyRegistrationcolor"
+        android:text="@string/project_quiz"
+        android:textColor="@color/White" />
 </LinearLayout>

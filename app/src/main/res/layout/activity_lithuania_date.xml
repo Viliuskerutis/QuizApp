@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MyBackgroundcolor"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="10dp"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/PirmasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/PirmasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/AntrasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/AntrasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/TrečiasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/TrečiasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/KetvirtasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/KetvirtasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/PenktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/PenktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/ŠeštasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/ŠeštasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/SeptintasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/SeptintasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/AštuntasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/AštuntasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DevintasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DevintasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DešimtasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DešimtasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/VienuoliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/VienuoliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvyliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvyliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/TryliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/TryliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/KeturioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/KeturioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/PenkioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/PenkioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/ŠešioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/ŠešioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/SeptynioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/SeptynioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/AštuonioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/AštuonioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DevynioliktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DevynioliktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtpirmasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtpirmasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtantrasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtantrasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimttrečiasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimttrečiasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtketvirtasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtketvirtasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtpenktasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtpenktasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtšeštasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtšeštasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtseptintasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtseptintasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtaštuntasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtaštuntasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/DvidešimtdevintasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DvidešimtdevintasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/TrisdešimtasKlausimas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Congrulations"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/TrisdešimtasAtsakymas"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/PrpjectColor"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/Baigti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/MyRegistrationcolor"
+                android:text="@string/endquiz"
+                android:textColor="@color/White" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

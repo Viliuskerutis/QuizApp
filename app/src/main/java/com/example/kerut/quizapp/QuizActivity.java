@@ -68,6 +68,15 @@ public class QuizActivity extends AppCompatActivity {
                 startActivity(goToFirstQuizActivity.putExtras(bundle));
             }
         });
+
+        Button secondquiz = (Button) findViewById(R.id.projectquiz);
+        secondquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToSecondQuizActivity = new Intent(QuizActivity.this, LithuaniaDateActivity.class);
+                startActivity(goToSecondQuizActivity);
+            }
+        });
     }
 
     @Override
@@ -151,7 +160,7 @@ public class QuizActivity extends AppCompatActivity {
                 conn.setConnectTimeout(CONNECTION_TIMEOUT);
                 conn.setRequestMethod("POST");
 
-                conn.setRequestProperty("Cookie", "__test=920fede98944bbdda89ea71c77b74648; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+                conn.setRequestProperty("Cookie", "__test=8e452962fb00ab036f6817a08e134aa6; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
 
                 // setDoInput and setDoOutput to true as we send and recieve data
                 conn.setDoInput(true);
@@ -213,7 +222,7 @@ public class QuizActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-
+            System.out.println(result);
             //this method will be running on UI thread
             pdLoading.dismiss();
             List<Apklausa> data = new ArrayList<>();
@@ -227,7 +236,7 @@ public class QuizActivity extends AppCompatActivity {
                             json_data.getString("id"),
                             json_data.getString("vartotojas"),
                             json_data.getString("kiekis"),
-                            json_data.getString(("data"))
+                            json_data.getString("data")
                     );
                     data.add(filmas);
                 }

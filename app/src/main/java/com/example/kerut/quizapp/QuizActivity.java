@@ -6,8 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -16,8 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.facebook.login.LoginManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,23 +28,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class QuizActivity extends AppCompatActivity {
 
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
-    private RecyclerView mRVApklausa;
+    private RecyclerView mRVSearchContainer;
     private AdapterQuiz mAdapter;
     private HashMap<String, String> data;
 
@@ -58,7 +51,7 @@ public class QuizActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_quiz);
 
-        Button firstQuiz = (Button) findViewById(R.id.firstquiz);
+        Button firstQuiz = findViewById(R.id.firstquiz);
         firstQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +62,7 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-        Button secondquiz = (Button) findViewById(R.id.projectquiz);
+        Button secondquiz = findViewById(R.id.projectquiz);
         secondquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,7 +139,7 @@ public class QuizActivity extends AppCompatActivity {
         protected String doInBackground(String... params) {
             try {
                 // Enter URL address where your php file resides
-                url = new URL("http://kerutisvilius.byethost14.com/mobile/searchquiz.php");
+                url = new URL(getString(R.string.URL_SEARCH));
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -160,7 +153,7 @@ public class QuizActivity extends AppCompatActivity {
                 conn.setConnectTimeout(CONNECTION_TIMEOUT);
                 conn.setRequestMethod("POST");
 
-                conn.setRequestProperty("Cookie", "__test=8e452962fb00ab036f6817a08e134aa6; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+                conn.setRequestProperty("Cookie", "__test=08c08d517fae7c14b1836a788be57237; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
 
                 // setDoInput and setDoOutput to true as we send and recieve data
                 conn.setDoInput(true);
@@ -225,27 +218,27 @@ public class QuizActivity extends AppCompatActivity {
             System.out.println(result);
             //this method will be running on UI thread
             pdLoading.dismiss();
-            List<Apklausa> data = new ArrayList<>();
+            List<SearchContainer> data = new ArrayList<>();
 
             try {
                 JSONArray jArray = new JSONArray(result);
                 //Extract data from json and store int ArrayList as class objects
                 for (int i = 0; i < jArray.length(); i++) {
                     JSONObject json_data = jArray.getJSONObject(i);
-                    Apklausa filmas = new Apklausa(
-                            json_data.getString("id"),
+                    SearchContainer searchContainer = new SearchContainer(
                             json_data.getString("vartotojas"),
                             json_data.getString("kiekis"),
-                            json_data.getString("data")
+                            json_data.getString("pavadinimas"),
+                            json_data.getString("time")
                     );
-                    data.add(filmas);
+                    data.add(searchContainer);
                 }
 
                 // Setup and Handover data to recyclerview
-                mRVApklausa = (RecyclerView) findViewById(R.id.ApklausaList);
+                mRVSearchContainer = findViewById(R.id.ApklausaList);
                 mAdapter = new AdapterQuiz(QuizActivity.this, data);
-                mRVApklausa.setAdapter(mAdapter);
-                mRVApklausa.setLayoutManager(new LinearLayoutManager(QuizActivity.this));
+                mRVSearchContainer.setAdapter(mAdapter);
+                mRVSearchContainer.setLayoutManager(new LinearLayoutManager(QuizActivity.this));
 
 
             } catch (JSONException e)
@@ -253,27 +246,10 @@ public class QuizActivity extends AppCompatActivity {
             {
                 // You to understand what actually error is and handle it appropriately
                 Toast.makeText(QuizActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-                Toast.makeText(QuizActivity.this, result.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(QuizActivity.this, result, Toast.LENGTH_LONG).show();
             }
 
         }
 
-    }
-
-    private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {
-        StringBuilder result = new StringBuilder();
-        boolean first = true;
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            if (first)
-                first = false;
-            else
-                result.append("&");
-
-            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
-            result.append("=");
-            result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
-        }
-
-        return result.toString();
     }
 }

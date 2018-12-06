@@ -18,13 +18,18 @@
     <string name="Login_please_wait">Please wait</string>
     <string name="register_success">Registration succeeded</string>
     <string name="register_failure">Username or Email is taken by another account</string>
-    <string name="URL_DATABASE">http://www.kerutisvilius.byethost14.com/mobile/quizdatabase.php</string>
-    <string name="URL_GETDATABASE">http://www.kerutisvilius.byethost14.com/mobile/getdatabase.php</string>
-    <string name="URL_ProjectDatabase">http://www.kerutisvilius.byethost14.com/mobile/projectPHP.php</string>
+
+    <string name="URL_DATABASE">http://kerutisvilius.byethost5.com/mobile/quizdatabase.php</string>
+    <string name="URL_SEARCH">http://kerutisvilius.byethost5.com/mobile/searchquiz.php</string>
+    <string name="URL_Registration">http://kerutisvilius.byethost5.com/mobile/registertoquiz.php</string>
+    <string name="URL_Login">http://kerutisvilius.byethost5.com/mobile/logintoquiz.php</string>
+    <string name="URL_QuizLithuania">http://kerutisvilius.byethost5.com/mobile/quizlithuania.php</string>
+    <string name="URL_QuizDates">http://kerutisvilius.byethost5.com/mobile/quizdates.php</string>
+
     <string name="login_success">Login succeeded</string>
     <string name="login_failure">Username or Email is not found</string>
     <string name="test_quiz">Quiz about Lithuania</string>
-    <string name="project_quiz">Lietuvos įžymios datos</string>
+    <string name="project_quiz">Famous dates of Lithuania</string>
 
     <string name="Nato">1. Kada Lietuva įstojo į NATO ?</string>
     <string name="on2004">2004 m.</string>
@@ -164,3 +169,5 @@
     <string name="teisingi">Teisingai atsakyta:</string>
     <string name="neatsakyta">Atsakymas nepateiktas:</string>
 </resources>
+
+

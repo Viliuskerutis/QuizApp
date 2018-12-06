@@ -21,13 +21,6 @@ public class Authentication {
         return matcher.find();
     }
 
-    public boolean isValidLabel(String email) {
-        final java.util.regex.Pattern VALID_EMAIL_ADDRESS_REGEX =
-                java.util.regex.Pattern.compile("^([0-9a-zA-Z!@#$%^& *]{1,100})+$");
-        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
-        return matcher.matches();
-    }
-
     public boolean isValidCredentials(String credentials) {
         final String CREDENTIALS_PATTERN = "^([0-9a-zA-Z]{3,25})+$";
         java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(CREDENTIALS_PATTERN);

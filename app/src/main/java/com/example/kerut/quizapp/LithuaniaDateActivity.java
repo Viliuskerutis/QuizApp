@@ -3,27 +3,19 @@ package com.example.kerut.quizapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class LithuaniaDateActivity extends AppCompatActivity {
 
@@ -35,7 +27,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
 
         setKlausimus();
 
-        Button baigti = (Button) findViewById(R.id.Baigti);
+        Button baigti = findViewById(R.id.Baigti);
         baigti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +42,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
 
                 try {
 
-                    EditText pirmasAtsakymas = (EditText) findViewById(R.id.PirmasAtsakymas);
+                    EditText pirmasAtsakymas = findViewById(R.id.PirmasAtsakymas);
                     if (pirmasAtsakymas.getText().toString().equals(getString(R.string.pirmasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!pirmasAtsakymas.getText().toString().isEmpty()) {
@@ -59,7 +51,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText antrasAtsakymas = (EditText) findViewById(R.id.AntrasAtsakymas);
+                    EditText antrasAtsakymas = findViewById(R.id.AntrasAtsakymas);
                     if (antrasAtsakymas.getText().toString().equals(getString(R.string.antrasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!antrasAtsakymas.getText().toString().isEmpty()) {
@@ -68,7 +60,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText trečiasAtsakymas = (EditText) findViewById(R.id.TrečiasAtsakymas);
+                    EditText trečiasAtsakymas = findViewById(R.id.TrečiasAtsakymas);
                     if (trečiasAtsakymas.getText().toString().equals(getString(R.string.trečiasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!trečiasAtsakymas.getText().toString().isEmpty()) {
@@ -77,7 +69,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText ketvirtasAtsakymas = (EditText) findViewById(R.id.KetvirtasAtsakymas);
+                    EditText ketvirtasAtsakymas = findViewById(R.id.KetvirtasAtsakymas);
                     if (ketvirtasAtsakymas.getText().toString().equals(getString(R.string.ketvirtasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!ketvirtasAtsakymas.getText().toString().isEmpty()) {
@@ -86,7 +78,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText penktasAtsakymas = (EditText) findViewById(R.id.PenktasAtsakymas);
+                    EditText penktasAtsakymas = findViewById(R.id.PenktasAtsakymas);
                     if (penktasAtsakymas.getText().toString().equals(getString(R.string.penktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!penktasAtsakymas.getText().toString().isEmpty()) {
@@ -95,7 +87,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText šeštasAtsakymas = (EditText) findViewById(R.id.ŠeštasAtsakymas);
+                    EditText šeštasAtsakymas = findViewById(R.id.ŠeštasAtsakymas);
                     if (šeštasAtsakymas.getText().toString().equals(getString(R.string.šeštasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!šeštasAtsakymas.getText().toString().isEmpty()) {
@@ -104,7 +96,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText septintasAtsakymas = (EditText) findViewById(R.id.SeptintasAtsakymas);
+                    EditText septintasAtsakymas = findViewById(R.id.SeptintasAtsakymas);
                     if (septintasAtsakymas.getText().toString().equals(getString(R.string.septintasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!septintasAtsakymas.getText().toString().isEmpty()) {
@@ -113,7 +105,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText aštuntasAtsakymas = (EditText) findViewById(R.id.AštuntasAtsakymas);
+                    EditText aštuntasAtsakymas = findViewById(R.id.AštuntasAtsakymas);
                     if (aštuntasAtsakymas.getText().toString().equals(getString(R.string.aštuntasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!aštuntasAtsakymas.getText().toString().isEmpty()) {
@@ -122,7 +114,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText devintasAtsakymas = (EditText) findViewById(R.id.DevintasAtsakymas);
+                    EditText devintasAtsakymas = findViewById(R.id.DevintasAtsakymas);
                     if (devintasAtsakymas.getText().toString().equals(getString(R.string.devintasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!devintasAtsakymas.getText().toString().isEmpty()) {
@@ -131,7 +123,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dešimtasAtsakymas = (EditText) findViewById(R.id.DešimtasAtsakymas);
+                    EditText dešimtasAtsakymas = findViewById(R.id.DešimtasAtsakymas);
                     if (dešimtasAtsakymas.getText().toString().equals(getString(R.string.dešimtasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dešimtasAtsakymas.getText().toString().isEmpty()) {
@@ -140,7 +132,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText vienuoliktasAtsakymas = (EditText) findViewById(R.id.VienuoliktasAtsakymas);
+                    EditText vienuoliktasAtsakymas = findViewById(R.id.VienuoliktasAtsakymas);
                     if (vienuoliktasAtsakymas.getText().toString().equals(getString(R.string.vienuoliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!vienuoliktasAtsakymas.getText().toString().isEmpty()) {
@@ -149,7 +141,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvyliktasAtsakymas = (EditText) findViewById(R.id.DvyliktasAtsakymas);
+                    EditText dvyliktasAtsakymas = findViewById(R.id.DvyliktasAtsakymas);
                     if (dvyliktasAtsakymas.getText().toString().equals(getString(R.string.dvyliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvyliktasAtsakymas.getText().toString().isEmpty()) {
@@ -158,7 +150,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText tryliktasAtsakymas = (EditText) findViewById(R.id.TryliktasAtsakymas);
+                    EditText tryliktasAtsakymas = findViewById(R.id.TryliktasAtsakymas);
                     if (tryliktasAtsakymas.getText().toString().equals(getString(R.string.tryliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!tryliktasAtsakymas.getText().toString().isEmpty()) {
@@ -167,7 +159,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText keturioliktasAtsakymas = (EditText) findViewById(R.id.KeturioliktasAtsakymas);
+                    EditText keturioliktasAtsakymas = findViewById(R.id.KeturioliktasAtsakymas);
                     if (keturioliktasAtsakymas.getText().toString().equals(getString(R.string.keturioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!keturioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -176,7 +168,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText penkioliktasAtsakymas = (EditText) findViewById(R.id.PenkioliktasAtsakymas);
+                    EditText penkioliktasAtsakymas = findViewById(R.id.PenkioliktasAtsakymas);
                     if (penkioliktasAtsakymas.getText().toString().equals(getString(R.string.penkioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!penkioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -185,7 +177,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText šešioliktasAtsakymas = (EditText) findViewById(R.id.ŠešioliktasAtsakymas);
+                    EditText šešioliktasAtsakymas = findViewById(R.id.ŠešioliktasAtsakymas);
                     if (šešioliktasAtsakymas.getText().toString().equals(getString(R.string.šešioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!šešioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -194,7 +186,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText septynioliktasAtsakymas = (EditText) findViewById(R.id.SeptynioliktasAtsakymas);
+                    EditText septynioliktasAtsakymas = findViewById(R.id.SeptynioliktasAtsakymas);
                     if (septynioliktasAtsakymas.getText().toString().equals(getString(R.string.septynioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!septynioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -203,7 +195,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText aštuonioliktasAtsakymas = (EditText) findViewById(R.id.AštuonioliktasAtsakymas);
+                    EditText aštuonioliktasAtsakymas = findViewById(R.id.AštuonioliktasAtsakymas);
                     if (aštuonioliktasAtsakymas.getText().toString().equals(getString(R.string.aštuonioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!aštuonioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -212,7 +204,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText devynioliktasAtsakymas = (EditText) findViewById(R.id.DevynioliktasAtsakymas);
+                    EditText devynioliktasAtsakymas = findViewById(R.id.DevynioliktasAtsakymas);
                     if (devynioliktasAtsakymas.getText().toString().equals(getString(R.string.devynioliktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!devynioliktasAtsakymas.getText().toString().isEmpty()) {
@@ -221,7 +213,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtasAtsakymas = (EditText) findViewById(R.id.DvidešimtasAtsakymas);
+                    EditText dvidešimtasAtsakymas = findViewById(R.id.DvidešimtasAtsakymas);
                     if (dvidešimtasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtasAtsakymas.getText().toString().isEmpty()) {
@@ -230,7 +222,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtpirmasAtsakymas = (EditText) findViewById(R.id.DvidešimtpirmasAtsakymas);
+                    EditText dvidešimtpirmasAtsakymas = findViewById(R.id.DvidešimtpirmasAtsakymas);
                     if (dvidešimtpirmasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtpirmasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtpirmasAtsakymas.getText().toString().isEmpty()) {
@@ -239,7 +231,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtantrasAtsakymas = (EditText) findViewById(R.id.DvidešimtantrasAtsakymas);
+                    EditText dvidešimtantrasAtsakymas = findViewById(R.id.DvidešimtantrasAtsakymas);
                     if (dvidešimtantrasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtantrasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtantrasAtsakymas.getText().toString().isEmpty()) {
@@ -248,7 +240,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimttrečiasAtsakymas = (EditText) findViewById(R.id.DvidešimttrečiasAtsakymas);
+                    EditText dvidešimttrečiasAtsakymas = findViewById(R.id.DvidešimttrečiasAtsakymas);
                     if (dvidešimttrečiasAtsakymas.getText().toString().equals(getString(R.string.dvidešimttrečiasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimttrečiasAtsakymas.getText().toString().isEmpty()) {
@@ -257,7 +249,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtketvirtasAtsakymas = (EditText) findViewById(R.id.DvidešimtketvirtasAtsakymas);
+                    EditText dvidešimtketvirtasAtsakymas = findViewById(R.id.DvidešimtketvirtasAtsakymas);
                     if (dvidešimtketvirtasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtketvirtasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtketvirtasAtsakymas.getText().toString().isEmpty()) {
@@ -266,7 +258,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtpenktasAtsakymas = (EditText) findViewById(R.id.DvidešimtpenktasAtsakymas);
+                    EditText dvidešimtpenktasAtsakymas = findViewById(R.id.DvidešimtpenktasAtsakymas);
                     if (dvidešimtpenktasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtpenktasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtpenktasAtsakymas.getText().toString().isEmpty()) {
@@ -275,7 +267,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtšeštasAtsakymas = (EditText) findViewById(R.id.DvidešimtšeštasAtsakymas);
+                    EditText dvidešimtšeštasAtsakymas = findViewById(R.id.DvidešimtšeštasAtsakymas);
                     if (dvidešimtšeštasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtšeštasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtšeštasAtsakymas.getText().toString().isEmpty()) {
@@ -284,7 +276,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtseptintasAtsakymas = (EditText) findViewById(R.id.DvidešimtseptintasAtsakymas);
+                    EditText dvidešimtseptintasAtsakymas = findViewById(R.id.DvidešimtseptintasAtsakymas);
                     if (dvidešimtseptintasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtseptintasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtseptintasAtsakymas.getText().toString().isEmpty()) {
@@ -293,7 +285,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtaštuntasAtsakymas = (EditText) findViewById(R.id.DvidešimtaštuntasAtsakymas);
+                    EditText dvidešimtaštuntasAtsakymas = findViewById(R.id.DvidešimtaštuntasAtsakymas);
                     if (dvidešimtaštuntasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtaštuntasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtaštuntasAtsakymas.getText().toString().isEmpty()) {
@@ -302,7 +294,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText dvidešimtdevintasAtsakymas = (EditText) findViewById(R.id.DvidešimtdevintasAtsakymas);
+                    EditText dvidešimtdevintasAtsakymas = findViewById(R.id.DvidešimtdevintasAtsakymas);
                     if (dvidešimtdevintasAtsakymas.getText().toString().equals(getString(R.string.dvidešimtdevintasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!dvidešimtdevintasAtsakymas.getText().toString().isEmpty()) {
@@ -311,7 +303,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                         neatsakyti++;
                     }
 
-                    EditText trisdešimtasAtsakymas = (EditText) findViewById(R.id.TrisdešimtasAtsakymas);
+                    EditText trisdešimtasAtsakymas = findViewById(R.id.TrisdešimtasAtsakymas);
                     if (trisdešimtasAtsakymas.getText().toString().equals(getString(R.string.trisdešimtasAtsakymas))) {
                         atsakytiTeisingai++;
                     } else if (!trisdešimtasAtsakymas.getText().toString().isEmpty()) {
@@ -354,7 +346,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                 System.out.println(data);
                 addResultToDB(data);
 
-                TextView textView = (TextView) findViewById(R.id.Ivertis);
+                TextView textView = findViewById(R.id.Ivertis);
                 NumberFormat formatter = new DecimalFormat("#0.00");
 
                 if (atsakytiTeisingai < 15)
@@ -364,35 +356,35 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                 else
                     textView.setText("Puikiai! Jūs surinkote: " + formatter.format(atsakytiTeisingai / 30D * 100D) + "%");
 
-                TextView teisingi = (TextView) findViewById(R.id.Teisingi);
+                TextView teisingi = findViewById(R.id.Teisingi);
                 teisingi.setText(R.string.teisingi);
 
-                TextView kiekteisingi = (TextView) findViewById(R.id.keikTeisingi);
+                TextView kiekteisingi = findViewById(R.id.keikTeisingi);
                 kiekteisingi.setText(atsakytiTeisingai + "/" + 30);
 
-                TextView nepasirinkta = (TextView) findViewById(R.id.Neatsakyti);
+                TextView nepasirinkta = findViewById(R.id.Neatsakyti);
                 nepasirinkta.setText(R.string.neatsakyta);
 
-                TextView kieknepasirinkta = (TextView) findViewById(R.id.keikNeatsakyti);
+                TextView kieknepasirinkta = findViewById(R.id.keikNeatsakyti);
                 kieknepasirinkta.setText(neatsakyti + "/" + 30);
 
-                TextView minNuokrypis = (TextView) findViewById(R.id.minNuokrypis);
+                TextView minNuokrypis = findViewById(R.id.minNuokrypis);
                 minNuokrypis.setText(R.string.minNuokrypis);
-                TextView koksminNuokrypis = (TextView) findViewById(R.id.koksmin);
+                TextView koksminNuokrypis = findViewById(R.id.koksmin);
 
                 if (min != Integer.MAX_VALUE) {
                     koksminNuokrypis.setText("" + min + "");
                 } else koksminNuokrypis.setText("-");
 
-                TextView maxNuokrypis = (TextView) findViewById(R.id.maxNuokrypis);
+                TextView maxNuokrypis = findViewById(R.id.maxNuokrypis);
                 maxNuokrypis.setText(R.string.maxNuokrypis);
-                TextView koksmaxNuokrypis = (TextView) findViewById(R.id.koksmax);
+                TextView koksmaxNuokrypis = findViewById(R.id.koksmax);
 
                 if (max != Integer.MIN_VALUE) {
                     koksmaxNuokrypis.setText("" + max + "");
                 } else koksmaxNuokrypis.setText("-");
 
-                Button getback = (Button) findViewById(R.id.ending_getback);
+                Button getback = findViewById(R.id.ending_getback);
                 getback.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -401,13 +393,13 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                     }
                 });
 
-                Button chechtheanswers = (Button) findViewById(R.id.ending_checkanswers);
+                Button chechtheanswers = findViewById(R.id.ending_checkanswers);
                 chechtheanswers.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         setContentView(R.layout.check_the_answers);
 
-                        TextView correct = (TextView) findViewById(R.id.correctsentence);
+                        TextView correct = findViewById(R.id.correctsentence);
                         correct.setText(getString(R.string.pirmasKlausimas) + "\n" + getString(R.string.Correct) + "  " + getString(R.string.pirmasAtsakymas) +
                                 "\n\n\n" + getString(R.string.antrasKlausimas) + "\n" + getString(R.string.Correct) + "  " + getString(R.string.antrasAtsakymas) +
                                 "\n\n\n" + getString(R.string.trečiasKlausimas) + "\n" + getString(R.string.Correct) + "  " + getString(R.string.trečiasAtsakymas) +
@@ -439,7 +431,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                                 "\n\n\n" + getString(R.string.dvidešimtdevintasKlausimas) + "\n" + getString(R.string.Correct) + "  " + getString(R.string.dvidešimtdevintasAtsakymas) +
                                 "\n\n\n" + getString(R.string.trisdešimtasKlausimas) + "\n" + getString(R.string.Correct) + "  " + getString(R.string.trisdešimtasAtsakymas));
 
-                        Button getback = (Button) findViewById(R.id.ending_getback);
+                        Button getback = findViewById(R.id.ending_getback);
                         getback.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -476,7 +468,6 @@ public class LithuaniaDateActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(String... params) {
                 HashMap<String, String> data = new HashMap<String, String>();
-                data.put("action", "project");
                 data.put("vartotojas", params[0]);
                 data.put("kiekis", params[1]);
                 data.put("pavadinimas", getText(R.string.project_quiz).toString());
@@ -484,7 +475,7 @@ public class LithuaniaDateActivity extends AppCompatActivity {
                 data.put("maxnuokrypis", params[3]);
                 data.put("neatsakyta", params[4]);
 
-                String result = database.sendPostRequest(getString(R.string.URL_DATABASE), data);
+                String result = database.sendPostRequest(getString(R.string.URL_QuizDates), data);
 
                 return result;
             }
@@ -494,94 +485,94 @@ public class LithuaniaDateActivity extends AppCompatActivity {
     }
 
     private void setKlausimus() {
-        TextView pirmasklausimas = (TextView) findViewById(R.id.PirmasKlausimas);
+        TextView pirmasklausimas = findViewById(R.id.PirmasKlausimas);
         pirmasklausimas.setText(R.string.pirmasKlausimas);
 
-        TextView antrasklausimas = (TextView) findViewById(R.id.AntrasKlausimas);
+        TextView antrasklausimas = findViewById(R.id.AntrasKlausimas);
         antrasklausimas.setText(R.string.antrasKlausimas);
 
-        TextView trečiasklausimas = (TextView) findViewById(R.id.TrečiasKlausimas);
+        TextView trečiasklausimas = findViewById(R.id.TrečiasKlausimas);
         trečiasklausimas.setText(R.string.trečiasKlausimas);
 
-        TextView ketvirtasklausimas = (TextView) findViewById(R.id.KetvirtasKlausimas);
+        TextView ketvirtasklausimas = findViewById(R.id.KetvirtasKlausimas);
         ketvirtasklausimas.setText(R.string.ketvirtasKlausimas);
 
-        TextView penktasklausimas = (TextView) findViewById(R.id.PenktasKlausimas);
+        TextView penktasklausimas = findViewById(R.id.PenktasKlausimas);
         penktasklausimas.setText(R.string.penktasKlausimas);
 
-        TextView šeštasklausimas = (TextView) findViewById(R.id.ŠeštasKlausimas);
+        TextView šeštasklausimas = findViewById(R.id.ŠeštasKlausimas);
         šeštasklausimas.setText(R.string.šeštasKlausimas);
 
-        TextView septintasklausimas = (TextView) findViewById(R.id.SeptintasKlausimas);
+        TextView septintasklausimas = findViewById(R.id.SeptintasKlausimas);
         septintasklausimas.setText(R.string.septintasKlausimas);
 
-        TextView aštuntasklausimas = (TextView) findViewById(R.id.AštuntasKlausimas);
+        TextView aštuntasklausimas = findViewById(R.id.AštuntasKlausimas);
         aštuntasklausimas.setText(R.string.aštuntasKlausimas);
 
-        TextView devintasklausimas = (TextView) findViewById(R.id.DevintasKlausimas);
+        TextView devintasklausimas = findViewById(R.id.DevintasKlausimas);
         devintasklausimas.setText(R.string.devintasKlausimas);
 
-        TextView dešimtasklausimas = (TextView) findViewById(R.id.DešimtasKlausimas);
+        TextView dešimtasklausimas = findViewById(R.id.DešimtasKlausimas);
         dešimtasklausimas.setText(R.string.dešimtasKlausimas);
 
-        TextView vienuoliktasklausimas = (TextView) findViewById(R.id.VienuoliktasKlausimas);
+        TextView vienuoliktasklausimas = findViewById(R.id.VienuoliktasKlausimas);
         vienuoliktasklausimas.setText(R.string.vienuoliktasKlausimas);
 
-        TextView dvyliktasklausimas = (TextView) findViewById(R.id.DvyliktasKlausimas);
+        TextView dvyliktasklausimas = findViewById(R.id.DvyliktasKlausimas);
         dvyliktasklausimas.setText(R.string.dvyliktasKlausimas);
 
-        TextView tryliktasklausimas = (TextView) findViewById(R.id.TryliktasKlausimas);
+        TextView tryliktasklausimas = findViewById(R.id.TryliktasKlausimas);
         tryliktasklausimas.setText(R.string.tryliktasKlausimas);
 
-        TextView keturioliktasklausimas = (TextView) findViewById(R.id.KeturioliktasKlausimas);
+        TextView keturioliktasklausimas = findViewById(R.id.KeturioliktasKlausimas);
         keturioliktasklausimas.setText(R.string.keturioliktasKlausimas);
 
-        TextView penkioliktasklausimas = (TextView) findViewById(R.id.PenkioliktasKlausimas);
+        TextView penkioliktasklausimas = findViewById(R.id.PenkioliktasKlausimas);
         penkioliktasklausimas.setText(R.string.penkioliktasKlausimas);
 
-        TextView šešioliktasklausimas = (TextView) findViewById(R.id.ŠešioliktasKlausimas);
+        TextView šešioliktasklausimas = findViewById(R.id.ŠešioliktasKlausimas);
         šešioliktasklausimas.setText(R.string.šešioliktasKlausimas);
 
-        TextView septynioliktasklausimas = (TextView) findViewById(R.id.SeptynioliktasKlausimas);
+        TextView septynioliktasklausimas = findViewById(R.id.SeptynioliktasKlausimas);
         septynioliktasklausimas.setText(R.string.septynioliktasKlausimas);
 
-        TextView aštuonioliktasklausimas = (TextView) findViewById(R.id.AštuonioliktasKlausimas);
+        TextView aštuonioliktasklausimas = findViewById(R.id.AštuonioliktasKlausimas);
         aštuonioliktasklausimas.setText(R.string.aštuonioliktasKlausimas);
 
-        TextView devynioliktasklausimas = (TextView) findViewById(R.id.DevynioliktasKlausimas);
+        TextView devynioliktasklausimas = findViewById(R.id.DevynioliktasKlausimas);
         devynioliktasklausimas.setText(R.string.devynioliktasKlausimas);
 
-        TextView dvidešimtasklausimas = (TextView) findViewById(R.id.DvidešimtasKlausimas);
+        TextView dvidešimtasklausimas = findViewById(R.id.DvidešimtasKlausimas);
         dvidešimtasklausimas.setText(R.string.dvidešimtasKlausimas);
 
-        TextView dvidešimtpirmasklausimas = (TextView) findViewById(R.id.DvidešimtpirmasKlausimas);
+        TextView dvidešimtpirmasklausimas = findViewById(R.id.DvidešimtpirmasKlausimas);
         dvidešimtpirmasklausimas.setText(R.string.dvidešimtpirmasKlausimas);
 
-        TextView dvidešimtantrasklausimas = (TextView) findViewById(R.id.DvidešimtantrasKlausimas);
+        TextView dvidešimtantrasklausimas = findViewById(R.id.DvidešimtantrasKlausimas);
         dvidešimtantrasklausimas.setText(R.string.dvidešimtantrasKlausimas);
 
-        TextView dvidešimttrečiasklausimas = (TextView) findViewById(R.id.DvidešimttrečiasKlausimas);
+        TextView dvidešimttrečiasklausimas = findViewById(R.id.DvidešimttrečiasKlausimas);
         dvidešimttrečiasklausimas.setText(R.string.dvidešimttrečiasKlausimas);
 
-        TextView dvidešimtketvirtasklausimas = (TextView) findViewById(R.id.DvidešimtketvirtasKlausimas);
+        TextView dvidešimtketvirtasklausimas = findViewById(R.id.DvidešimtketvirtasKlausimas);
         dvidešimtketvirtasklausimas.setText(R.string.dvidešimtketvirtasKlausimas);
 
-        TextView dvidešimtpenktasklausimas = (TextView) findViewById(R.id.DvidešimtpenktasKlausimas);
+        TextView dvidešimtpenktasklausimas = findViewById(R.id.DvidešimtpenktasKlausimas);
         dvidešimtpenktasklausimas.setText(R.string.dvidešimtpenktasKlausimas);
 
-        TextView dvidešimtšeštasklausimas = (TextView) findViewById(R.id.DvidešimtšeštasKlausimas);
+        TextView dvidešimtšeštasklausimas = findViewById(R.id.DvidešimtšeštasKlausimas);
         dvidešimtšeštasklausimas.setText(R.string.dvidešimtšestasKlausimas);
 
-        TextView dvidešimtseptintasklausimas = (TextView) findViewById(R.id.DvidešimtseptintasKlausimas);
+        TextView dvidešimtseptintasklausimas = findViewById(R.id.DvidešimtseptintasKlausimas);
         dvidešimtseptintasklausimas.setText(R.string.dvidešimtseptintasKlausimas);
 
-        TextView dvidešimtaštuntasklausimas = (TextView) findViewById(R.id.DvidešimtaštuntasKlausimas);
+        TextView dvidešimtaštuntasklausimas = findViewById(R.id.DvidešimtaštuntasKlausimas);
         dvidešimtaštuntasklausimas.setText(R.string.dvidešimtaštuntasKlausimas);
 
-        TextView dvidešimtdevintasklausimas = (TextView) findViewById(R.id.DvidešimtdevintasKlausimas);
+        TextView dvidešimtdevintasklausimas = findViewById(R.id.DvidešimtdevintasKlausimas);
         dvidešimtdevintasklausimas.setText(R.string.dvidešimtdevintasKlausimas);
 
-        TextView trisdešimtasklausimas = (TextView) findViewById(R.id.TrisdešimtasKlausimas);
+        TextView trisdešimtasklausimas = findViewById(R.id.TrisdešimtasKlausimas);
         trisdešimtasklausimas.setText(R.string.trisdešimtasKlausimas);
     }
 }

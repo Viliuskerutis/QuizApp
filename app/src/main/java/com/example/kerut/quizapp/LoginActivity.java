@@ -7,8 +7,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -21,10 +21,8 @@ import android.widget.Toast;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -34,7 +32,6 @@ import org.json.JSONObject;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -62,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         printHashKey(this);
 
         callbackManager = CallbackManager.Factory.create();
-        final LoginButton fbloginButton = (LoginButton) findViewById(R.id.login_button);
+        final LoginButton fbloginButton = findViewById(R.id.login_button);
         fbloginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -73,15 +70,20 @@ public class LoginActivity extends AppCompatActivity {
                         public void onCompleted(JSONObject object, GraphResponse response) {
 
                             try {
-                                Log.i("LoginActivity", object.toString());
+                                Log.i("LoginActivity", "\n\n\n\n\n" + object.toString());
                                 String firstName = object.getString("first_name");
                                 String email = object.getString("email");
-                                final User user = new User(firstName, "unknown", email);
-                                ArrayList<String> list = new ArrayList<String>();
-                                list.add(0, firstName);
-                                list.add(1, "unknown");
-                                loginFBtoDB(list);
+                                User user = new User(getApplicationContext());
+                                user.setUsernameFB(firstName);
+                                user.setEmailFB(email);
+                                user.setPasswordFB("unknown");
+                                user.setUsername(firstName);
+//                                ArrayList<String> list = new ArrayList<String>();
+//                                list.add(0, firstName);
+//                                list.add(1, "unknown");
                                 registerToDB(user);
+                                Intent goToSearchActivity = new Intent(LoginActivity.this, QuizActivity.class);
+                                startActivity(goToSearchActivity);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -136,12 +138,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void login() {
-        this.username = (EditText) findViewById(R.id.username);
-        this.password = (EditText) findViewById(R.id.password);
+        this.username = findViewById(R.id.username);
+        this.password = findViewById(R.id.password);
 
-        Button submit = (Button) findViewById(R.id.login_submit);
+        Button submit = findViewById(R.id.login_submit);
 
-        rememberMeCheckBox = (CheckBox) findViewById(R.id.login_remember_me);
+        rememberMeCheckBox = findViewById(R.id.login_remember_me);
         final User user = new User(getApplicationContext());
         rememberMeCheckBox.setChecked(user.isRemembered());
 
@@ -195,7 +197,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Button register = (Button) findViewById(R.id.login_register);
+        Button register = findViewById(R.id.login_register);
         register.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -225,9 +227,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (s.equals(Integer.toString(HttpsURLConnection.HTTP_OK))) {
                     Intent goToSearchActivity = new Intent(LoginActivity.this, QuizActivity.class);
                     startActivity(goToSearchActivity);
+                    Toast.makeText(LoginActivity.this, "Naujas vartotojas priregistruotas!", Toast.LENGTH_LONG).show();
                 } else {
                     Intent goToSearchActivity = new Intent(LoginActivity.this, QuizActivity.class);
                     startActivity(goToSearchActivity);
+                    Toast.makeText(LoginActivity.this, "Sveiki sugrįžę!", Toast.LENGTH_LONG).show();
                 }
                 loading.dismiss();
             }
@@ -235,20 +239,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(String... params) {
                 HashMap<String, String> data = new HashMap<String, String>();
-                data.put("action", "registertoquiz");
                 data.put("username", params[0]);
                 data.put("password", params[1]);
                 data.put("email", params[2]);
 
-                String result = database.sendPostRequest(getString(R.string.URL_DATABASE), data);
+                String result = database.sendPostRequest(getString(R.string.URL_Registration), data);
 
                 return result;
             }
         }
 
         Registration registration = new Registration();
-        registration.execute(userRegistration.getUsernameForRegistration(), userRegistration.getPasswordForRegistration(),
-                userRegistration.getEmailForRegistration());
+        registration.execute(userRegistration.getUsernameFB(), userRegistration.getPasswordFB(),
+                userRegistration.getEmailFB());
 
     }
 
@@ -281,55 +284,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(String... params) {
                 HashMap<String, String> data = new HashMap<String, String>();
-                data.put("action", "logintoquiz");
                 data.put("username", params[0]);
                 data.put("password", params[1]);
-                String result = database.sendPostRequest(getString(R.string.URL_DATABASE), data);
+                String result = database.sendPostRequest(getString(R.string.URL_Login), data);
                 return result;
             }
         }
         Login login = new Login();
         login.execute(user.getUsernameForLogin(), user.getPasswordForLogin());
-    }
-
-    private void loginFBtoDB(ArrayList<String> list) {
-        class Login extends AsyncTask<String, Void, String> {
-            ProgressDialog loading;
-            DB database = new DB();
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                loading = ProgressDialog.show(LoginActivity.this, getString(R.string.Login_please_wait), null, true, true);
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                if (s.equals(Integer.toString(HttpsURLConnection.HTTP_ACCEPTED))) {
-                    Intent goToSearchActivity = new Intent(LoginActivity.this, QuizActivity.class);
-                    startActivity(goToSearchActivity);
-                    Toast.makeText(LoginActivity.this, getString(R.string.login_success), Toast.LENGTH_LONG).show();
-                } else if (s.equals(Integer.toString(HttpsURLConnection.HTTP_NOT_AUTHORITATIVE))) {
-                    Toast.makeText(LoginActivity.this, getString(R.string.login_failure), Toast.LENGTH_LONG).show();
-                }
-
-                loading.dismiss();
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                HashMap<String, String> data = new HashMap<String, String>();
-                data.put("action", "logintoquiz");
-                data.put("username", params[0]);
-                data.put("password", params[1]);
-                String result = database.sendPostRequest(getString(R.string.URL_DATABASE), data);
-                return result;
-            }
-        }
-        User user = new User(getApplicationContext());
-        user.setUsernameLogin(list.get(0));
-        Login login = new Login();
-        login.execute(list.get(0), list.get(1));
     }
 }

@@ -26,13 +26,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        this.username = (EditText) findViewById(R.id.register_name);
-        this.password1 = (EditText) findViewById(R.id.register_password1);
-        this.password2 = (EditText) findViewById(R.id.register_password2);
-        this.email = (EditText) findViewById(R.id.register_email);
+        this.username = findViewById(R.id.register_name);
+        this.password1 = findViewById(R.id.register_password1);
+        this.password2 = findViewById(R.id.register_password2);
+        this.email = findViewById(R.id.register_email);
 
 
-        Button register = (Button) findViewById(R.id.register);
+        Button register = findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View focusView) {
@@ -113,12 +113,11 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(String... params) {
                 HashMap<String, String> data = new HashMap<String, String>();
-                data.put("action", "registertoquiz");
                 data.put("username", params[0]);
                 data.put("password", params[1]);
                 data.put("email", params[2]);
 
-                String result = database.sendPostRequest(getString(R.string.URL_DATABASE), data);
+                String result = database.sendPostRequest(getString(R.string.URL_Registration), data);
 
                 return result;
             }

@@ -1,14 +1,11 @@
 package com.example.kerut.quizapp;
 
-/**
- * Created by kerut on 27/10/2017.
- */
-
 import android.content.Context;
 import android.content.SharedPreferences;
 
+
 /**
- * Created by kerut on 16/10/2017.
+ * Created by Vilius Kerutis on 30/09/2018.
  */
 
 public class User {

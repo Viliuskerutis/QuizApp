@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Created by Vilius Kerutis on 24/10/2018.
+ */
+
 public class FirstQuizActivity extends AppCompatActivity {
 
     @Override

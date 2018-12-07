@@ -13,6 +13,10 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 
+/**
+ * Created by Vilius Kerutis on 30/09/2018.
+ */
+
 public class DB {
 
     public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
@@ -28,7 +32,7 @@ public class DB {
             // byethost naudoja antibot sistema, todel reikia kiekvienam rankutėmis suvesti cookie turinį,
             // kuris pas kiekviena bus skirtingas. kaip tai padaryti zemiau nuoroda
             // http://stackoverflow.com/questions/31912000/byethost-server-passing-html-values-checking-your-browser-with-json-string
-            conn.setRequestProperty("Cookie", "__test=08c08d517fae7c14b1836a788be57237; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+            conn.setRequestProperty("Cookie", "__test=f20a16c1598525e6ea62bd048df40084; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
             conn.setDoInput(true);
             conn.setDoOutput(true);
 

@@ -56,14 +56,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/TrečiasKlausimas"
+                android:id="@+id/thirdQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/TrečiasAtsakymas"
+                android:id="@+id/thirdAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -110,14 +110,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/ŠeštasKlausimas"
+                android:id="@+id/sixthQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/ŠeštasAtsakymas"
+                android:id="@+id/sixthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -146,14 +146,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/AštuntasKlausimas"
+                android:id="@+id/eightQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/AštuntasAtsakymas"
+                android:id="@+id/eigthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -182,14 +182,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DešimtasKlausimas"
+                android:id="@+id/tenthQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DešimtasAtsakymas"
+                android:id="@+id/tenthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -290,14 +290,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/ŠešioliktasKlausimas"
+                android:id="@+id/sixteenthQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/ŠešioliktasAtsakymas"
+                android:id="@+id/sixteenthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -326,14 +326,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/AštuonioliktasKlausimas"
+                android:id="@+id/eighteenthQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/AštuonioliktasAtsakymas"
+                android:id="@+id/eighteenthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -362,14 +362,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtasKlausimas"
+                android:id="@+id/DvidesimtasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtasAtsakymas"
+                android:id="@+id/twentythAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -380,14 +380,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtpirmasKlausimas"
+                android:id="@+id/DvidesimtpirmasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtpirmasAtsakymas"
+                android:id="@+id/twentyfirstAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -398,14 +398,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtantrasKlausimas"
+                android:id="@+id/DvidesimtantrasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtantrasAtsakymas"
+                android:id="@+id/twentySecondAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -416,14 +416,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimttrečiasKlausimas"
+                android:id="@+id/twentyThirdQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimttrečiasAtsakymas"
+                android:id="@+id/twentyThirdAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -434,14 +434,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtketvirtasKlausimas"
+                android:id="@+id/DvidesimtketvirtasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtketvirtasAtsakymas"
+                android:id="@+id/twentyfourthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -452,14 +452,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtpenktasKlausimas"
+                android:id="@+id/DvidesimtpenktasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtpenktasAtsakymas"
+                android:id="@+id/twentyFivethAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -470,14 +470,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtšeštasKlausimas"
+                android:id="@+id/DvidesimtsestasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtšeštasAtsakymas"
+                android:id="@+id/twentySixthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -488,14 +488,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtseptintasKlausimas"
+                android:id="@+id/DvidesimtseptintasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtseptintasAtsakymas"
+                android:id="@+id/twentySeventhAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -506,14 +506,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtaštuntasKlausimas"
+                android:id="@+id/DvidesimtastuntasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtaštuntasAtsakymas"
+                android:id="@+id/twentyEighthAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -524,14 +524,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/DvidešimtdevintasKlausimas"
+                android:id="@+id/DvidesimtdevintasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/DvidešimtdevintasAtsakymas"
+                android:id="@+id/twentyNinethAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"
@@ -542,14 +542,14 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:id="@+id/TrisdešimtasKlausimas"
+                android:id="@+id/TrisdesimtasKlausimas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Congrulations"
                 android:textSize="18dp" />
 
             <EditText
-                android:id="@+id/TrisdešimtasAtsakymas"
+                android:id="@+id/thirdythAnswer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/PrpjectColor"

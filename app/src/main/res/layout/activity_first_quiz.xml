@@ -109,11 +109,11 @@
                     android:textColor="@color/White" />
 
                 <RadioButton
-                    android:id="@+id/Karalius_Kęstutis"
+                    android:id="@+id/Karalius_Kestutis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/White"
-                    android:text="@string/Kęstutis"
+                    android:text="@string/Kestutis"
                     android:textColor="@color/White" />
             </RadioGroup>
 

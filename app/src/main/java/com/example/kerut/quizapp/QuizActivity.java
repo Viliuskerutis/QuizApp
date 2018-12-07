@@ -35,6 +35,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Created by Vilius Kerutis on 30/09/2018.
+ */
+
 public class QuizActivity extends AppCompatActivity {
 
     public static final int CONNECTION_TIMEOUT = 10000;
@@ -153,7 +157,7 @@ public class QuizActivity extends AppCompatActivity {
                 conn.setConnectTimeout(CONNECTION_TIMEOUT);
                 conn.setRequestMethod("POST");
 
-                conn.setRequestProperty("Cookie", "__test=08c08d517fae7c14b1836a788be57237; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+                conn.setRequestProperty("Cookie", "__test=f20a16c1598525e6ea62bd048df40084; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
 
                 // setDoInput and setDoOutput to true as we send and recieve data
                 conn.setDoInput(true);

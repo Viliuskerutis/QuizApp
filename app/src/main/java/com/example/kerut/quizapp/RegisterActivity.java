@@ -14,6 +14,10 @@ import java.util.HashMap;
 
 import javax.net.ssl.HttpsURLConnection;
 
+/**
+ * Created by Vilius Kerutis on 30/09/2018.
+ */
+
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText username;

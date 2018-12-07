@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by kerut on 08/11/2017.
+ * Created by Vilius Kerutis on 30/09/2018.
  */
 
 public class AdapterQuiz extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

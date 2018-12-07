@@ -1,8 +1,9 @@
 package com.example.kerut.quizapp;
 
 /**
- * Created by kerut on 08/11/2017.
+ * Created by Vilius Kerutis on 30/09/2018.
  */
+
 
 public class SearchContainer {
     private String id;

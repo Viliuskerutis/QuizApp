@@ -31,6 +31,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -143,7 +144,8 @@ public class QuizActivity extends AppCompatActivity {
         protected String doInBackground(String... params) {
             try {
                 // Enter URL address where your php file resides
-                url = new URL(getString(R.string.URL_SEARCH));
+                url = new URL(
+                        getString(R.string.URL_SEARCH));
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -157,7 +159,7 @@ public class QuizActivity extends AppCompatActivity {
                 conn.setConnectTimeout(CONNECTION_TIMEOUT);
                 conn.setRequestMethod("POST");
 
-                conn.setRequestProperty("Cookie", "__test=f20a16c1598525e6ea62bd048df40084; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+                conn.setRequestProperty("Cookie", "__test=08c08d517fae7c14b1836a788be57237; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
 
                 // setDoInput and setDoOutput to true as we send and recieve data
                 conn.setDoInput(true);
@@ -169,7 +171,7 @@ public class QuizActivity extends AppCompatActivity {
                 String query = builder.build().getEncodedQuery();
 
                 OutputStream os = conn.getOutputStream();
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
                 //writer.write(getPostDataString(data));
                 writer.write(query);
                 writer.flush();

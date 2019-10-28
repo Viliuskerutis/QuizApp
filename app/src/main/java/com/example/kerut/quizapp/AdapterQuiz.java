@@ -45,9 +45,9 @@ public class AdapterQuiz extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         myHolder.textusername.setText("Vartotojas: " + current.getUsername());
 
         if(current.getTopic().equals("Quiz about Lithuania"))
-            myHolder.textcount.setText("Atsakyta teisingai klausimų: " + current.getCount() + "/10");
+            myHolder.textcount.setText("Atsakyta teisingai klausimų: " + current.getCount());
         if(current.getTopic().equals("Famous dates of Lithuania"))
-            myHolder.textcount.setText("Atsakyta teisingai klausimų: " + current.getCount() + "/30");
+            myHolder.textcount.setText("Atsakyta teisingai klausimų: " + current.getCount());
 
         myHolder.texttopic.setText("Quiz: " + current.getTopic());
         myHolder.texttime.setText("Data: " + current.getTime());

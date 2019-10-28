@@ -20,11 +20,12 @@
     <string name="register_failure">Username or Email is taken by another account</string>
 
     <string name="URL_DATABASE">http://kerutisvilius.byethost5.com/mobile/quizdatabase.php</string>
-    <string name="URL_SEARCH">http://kerutisvilius.byethost5.com/mobile/searchquiz.php</string>
-    <string name="URL_Registration">http://kerutisvilius.byethost5.com/mobile/registertoquiz.php</string>
-    <string name="URL_Login">http://kerutisvilius.byethost5.com/mobile/logintoquiz.php</string>
-    <string name="URL_QuizLithuania">http://kerutisvilius.byethost5.com/mobile/quizlithuania.php</string>
-    <string name="URL_QuizDates">http://kerutisvilius.byethost5.com/mobile/quizdates.php</string>
+    <string name="URL_SEARCH">http://saitynas.byethost14.com/mobile/searchquiz.php</string>
+    <string name="URL_Registration">http://saitynas.byethost14.com/mobile/registertoquiz.php</string>
+    <string name="URL_Login">http://saitynas.byethost14.com/mobile/logintoquiz.php</string>
+    <string name="URL_QuizLithuania">http://saitynas.byethost14.com/mobile/quizlithuania.php</string>
+    <string name="URL_QuizDates">http://saitynas.byethost14.com/mobile/quizdates.php</string>
+    <string name="URL_LithuanianData">http://saitynas.byethost14.com/mobile/lithuaniandata.php</string>
 
     <string name="login_success">Login succeeded</string>
     <string name="login_failure">Username or Email is not found</string>

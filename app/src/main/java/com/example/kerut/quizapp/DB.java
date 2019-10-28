@@ -9,6 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
@@ -32,13 +33,13 @@ public class DB {
             // byethost naudoja antibot sistema, todel reikia kiekvienam rankutėmis suvesti cookie turinį,
             // kuris pas kiekviena bus skirtingas. kaip tai padaryti zemiau nuoroda
             // http://stackoverflow.com/questions/31912000/byethost-server-passing-html-values-checking-your-browser-with-json-string
-            conn.setRequestProperty("Cookie", "__test=f20a16c1598525e6ea62bd048df40084; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+            conn.setRequestProperty("Cookie", "__test=f6baeca2fe50424ce6ecc822e94320a6; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
             conn.setDoInput(true);
             conn.setDoOutput(true);
 
             OutputStream os = conn.getOutputStream();
             BufferedWriter writer = new BufferedWriter(
-                    new OutputStreamWriter(os, "UTF-8"));
+                    new OutputStreamWriter(os, StandardCharsets.UTF_8));
             writer.write(getPostDataString(postDataParams));
 
             writer.flush();

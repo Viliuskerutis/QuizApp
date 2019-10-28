@@ -3,6 +3,7 @@ package com.example.kerut.quizapp;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,10 +12,29 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static com.example.kerut.quizapp.QuizActivity.CONNECTION_TIMEOUT;
+import static com.example.kerut.quizapp.QuizActivity.READ_TIMEOUT;
 
 /**
  * Created by Vilius Kerutis on 24/10/2018.
@@ -22,10 +42,18 @@ import java.util.List;
 
 public class FirstQuizActivity extends AppCompatActivity {
 
+    ArrayList<HashMap> list = new ArrayList<HashMap>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        getQuizData getQuizData = new getQuizData("");
+        getQuizData.execute();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_quiz);
+
+
 
         final RadioGroup nato = findViewById(R.id.Nato_RadioButton);
         final RadioButton natoTeisingas = findViewById(R.id.NATO_2004);
@@ -193,6 +221,150 @@ public class FirstQuizActivity extends AppCompatActivity {
             }
         });
     }
+
+    private class getQuizData extends AsyncTask<String, String, String> {
+
+        ProgressDialog pdLoading = new ProgressDialog(FirstQuizActivity.this);
+        HttpURLConnection conn;
+        URL url = null;
+        String searchQuery;
+
+        public getQuizData(String searchQuery) {
+            this.searchQuery = searchQuery;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            //this method will be running on UI thread
+            pdLoading.setMessage("\tLoading...");
+            pdLoading.setCancelable(false);
+            pdLoading.show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                // Enter URL address where your php file resides
+                url = new URL(
+                        getString(R.string.URL_LithuanianData));
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                return e.toString();
+            }
+            try {
+
+                // Setup HttpURLConnection class to send and receive data from php and mysql
+                conn = (HttpURLConnection) url.openConnection();
+                conn.setReadTimeout(READ_TIMEOUT);
+                conn.setConnectTimeout(CONNECTION_TIMEOUT);
+                conn.setRequestMethod("POST");
+
+                conn.setRequestProperty("Cookie", "__test=08c08d517fae7c14b1836a788be57237; expires=Friday, January 1, 2038 at 1:55:55 AM; path=/");
+
+                // setDoInput and setDoOutput to true as we send and recieve data
+                conn.setDoInput(true);
+                conn.setDoOutput(true);
+
+                // add parameter to our above url
+                User user = new User(getApplicationContext());
+                Uri.Builder builder = new Uri.Builder().appendQueryParameter("searchQuery", searchQuery).appendQueryParameter("username", user.getUsernameForLogin());
+                String query = builder.build().getEncodedQuery();
+
+                OutputStream os = conn.getOutputStream();
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
+                //writer.write(getPostDataString(data));
+                writer.write(query);
+                writer.flush();
+                writer.close();
+                os.close();
+                conn.connect();
+
+            } catch (IOException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+                return e1.toString();
+            }
+
+            try {
+
+                int response_code = conn.getResponseCode();
+
+                // Check if successful connection made
+                if (response_code == HttpURLConnection.HTTP_OK) {
+
+                    // Read data sent from server
+                    InputStream input = conn.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+                    StringBuilder result = new StringBuilder();
+                    String line;
+
+                    while ((line = reader.readLine()) != null) {
+                        result.append(line);
+                    }
+
+                    // Pass data to onPostExecute method
+                    return (result.toString());
+
+                } else {
+                    return ("Connection error");
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return e.toString();
+            } finally {
+                conn.disconnect();
+            }
+
+
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            System.out.println(result);
+            //this method will be running on UI thread
+            pdLoading.dismiss();
+            List<SearchContainer> data = new ArrayList<>();
+
+            try {
+                JSONArray jArray = new JSONArray(result);
+
+
+                //Extract data from json and store int ArrayList as class objects
+                for (int i = 0; i < jArray.length(); i++) {
+                    JSONObject json_data = jArray.getJSONObject(i);
+
+                    HashMap<String, String> hashMap = new HashMap<>();
+                    hashMap.put("id", json_data.getString("id"));
+                    hashMap.put("question", json_data.getString("question"));
+                    hashMap.put("var1", json_data.getString("var1"));
+                    hashMap.put("var2", json_data.getString("var2"));
+                    hashMap.put("var3", json_data.getString("var3"));
+                    hashMap.put("var4", json_data.getString("var4"));
+
+                    list.add(hashMap);
+                }
+
+
+
+
+            } catch (JSONException e)
+
+            {
+                // You to understand what actually error is and handle it appropriately
+                Toast.makeText(FirstQuizActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(FirstQuizActivity.this, result, Toast.LENGTH_LONG).show();
+            }
+
+        }
+
+    }
+
+
 
     private void addResultToDB(final List<String> duom) {
 

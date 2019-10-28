@@ -1,5 +1,8 @@
 package com.example.kerut.quizapp;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -20,6 +23,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class DB {
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
         URL url;
         String response = "";

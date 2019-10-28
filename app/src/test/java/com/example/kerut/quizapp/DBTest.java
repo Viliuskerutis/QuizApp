@@ -86,6 +86,21 @@ public class DBTest {
     }
 
     @Test
+    public void sendPostRequestLithuaniaDatesQuizWrong() {
+        DB db = new DB();
+        HashMap<String, String> data = new HashMap<String, String>();
+        data.put("vartotojas", "");
+        data.put("kiekis", "5");
+        data.put("pavadinimas", "aaa");
+        data.put("minnuokrypis", "5");
+        data.put("maxnuokrypis", "5");
+        data.put("neatsakyta", "5");
+        String response = db.sendPostRequest("http://saitynas.byethost14.com/mobile/quizdates.php", data);
+
+        Assert.assertEquals("please fill all values", response);
+    }
+
+    @Test
     public void sendPostRequestLithuaniaQuiz() {
         DB db = new DB();
         HashMap<String, String> data = new HashMap<String, String>();
@@ -95,5 +110,17 @@ public class DBTest {
         String response = db.sendPostRequest("http://saitynas.byethost14.com/mobile/quizlithuania.php", data);
 
         Assert.assertEquals("200", response);
+    }
+
+    @Test
+    public void sendPostRequestLithuaniaQuizWrong() {
+        DB db = new DB();
+        HashMap<String, String> data = new HashMap<String, String>();
+        data.put("vartotojas", "");
+        data.put("kiekis", "");
+        data.put("pavadinimas", "");
+        String response = db.sendPostRequest("http://saitynas.byethost14.com/mobile/quizlithuania.php", data);
+
+        Assert.assertEquals("please fill all values", response);
     }
 }

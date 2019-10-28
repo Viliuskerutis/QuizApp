@@ -2,14 +2,58 @@ package com.example.kerut.quizapp;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import static junit.framework.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class AuthenticationTest {
+
+    @RunWith(Parameterized.class)
+    public static class ParameterizedTestValidEmails {
+
+        @Parameterized.Parameter(value = 0)
+        public String email;
+
+        @Parameterized.Parameters
+        public static Collection<String> initParameters() {
+            return Arrays.asList("kerutisvilius@gmail.com" , "linas.adolfus@yahoo.com", "nikas.nikolengen@info.ru");
+        }
+
+        @Test
+        public void sample_parseValue() {
+            Authentication authentication = new Authentication();
+            assertTrue(authentication.isValidEmail(email));
+        }
+    }
+
+    @RunWith(Parameterized.class)
+    public static class ParameterizedTestWrongEmails {
+
+        @Parameterized.Parameter(value = 0)
+        public String email;
+
+        @Parameterized.Parameters
+        public static Collection<String> initParameters() {
+            return Arrays.asList("kerutisviliusgmail.com" , "linas.adolfus@yahoo!?com", "nikas?nikolengen@info.ru");
+        }
+
+        @Test
+        public void sample_parseValue() {
+            Authentication authentication = new Authentication();
+            assertFalse(authentication.isValidEmail(email));
+        }
+    }
 
     @Test
     public void isValidEmailValid() {
         Authentication authentication = new Authentication();
         boolean valid = authentication.isValidEmail("kerutisvilius@gmail.com");
-        Assert.assertTrue(valid);
+        assertTrue(valid);
     }
 
     @Test
@@ -44,7 +88,7 @@ public class AuthenticationTest {
     public void isValidCredentialsValid() {
         Authentication authentication = new Authentication();
         boolean valid = authentication.isValidCredentials("abc");
-        Assert.assertTrue(valid);
+        assertTrue(valid);
     }
 
     @Test
@@ -58,14 +102,14 @@ public class AuthenticationTest {
     public void isValidCredentialsValidLength() {
         Authentication authentication = new Authentication();
         boolean valid = authentication.isValidCredentials("qwertyuiopasdfghjklzxcvbn");
-        Assert.assertTrue(valid);
+        assertTrue(valid);
     }
 
     @Test
     public void isValidCredentialsNotValidLength() {
         Authentication authentication = new Authentication();
         boolean valid = authentication.isValidCredentials("qwertyuiopasdfghjklzxcvbnm");
-        Assert.assertTrue(valid);
+        assertTrue(valid);
     }
 
     @Test
